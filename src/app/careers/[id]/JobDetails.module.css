@@ -1,0 +1,61 @@
+.jobHeader {
+  padding: clamp(80px, 12vw, 120px) clamp(80px, 10vw, 100px)
+    clamp(40px, 6vw, 60px);
+  margin-top: 0;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e40af;
+  text-decoration: none;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  transform: translateX(-5px);
+}
+
+.jobTitle {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.jobMeta {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.jobLocation,
+.jobType {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.shareBtn {
+  background: white;
+  color: #1e40af;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #1e40af;
+  transition: all 0.3s ease;
+}
+
+.shareBtn:hover {
+  background: #1e40af;
+  color: white;
+}

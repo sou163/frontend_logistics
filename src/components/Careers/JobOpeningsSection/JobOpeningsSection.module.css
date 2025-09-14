@@ -1,0 +1,123 @@
+.jobOpenings {
+  padding: clamp(40px, 5vw, 60px) clamp(50px, 8vw, 100px);
+}
+
+.jobOpenings h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #2e2d2d;
+  text-align: center;
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.jobOpenings h2 span {
+  color: #1e40af;
+}
+
+.jobOpenings p {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: #374151;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+/* ===== JOB FILTERS ===== */
+.jobFilters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background: white;
+  color: #1e3a8a;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.filterBtn.active,
+.filterBtn:hover {
+  background: #1e40af;
+  color: white;
+  border-color: #1e40af;
+}
+
+/* ===== JOB GRID ===== */
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.jobCard {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.jobCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.2);
+  border-color: #3b82f6;
+}
+
+.jobTitle {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.jobMeta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.jobType,
+.jobLocation {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1e40af;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.jobDescription {
+  color: #6b7280;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.viewDetailsBtn {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.viewDetailsBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}

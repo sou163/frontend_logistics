@@ -1,0 +1,112 @@
+/* Blog content styles */
+.blogDetails {
+  margin-top: 80px;
+  padding: 60px;
+  text-align: center;
+}
+
+.blogHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blogCategory {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1e40af;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.blogTitle {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.blogMeta {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.blogImgContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(30, 58, 138, 0.3);
+}
+
+.blogImgContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(30, 64, 175, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.blogImg {
+  width: 100%;
+  height: clamp(200px, 40vw, 400px);
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.blogImgContainer:hover .blog-image {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.2);
+}
+
+.blogContent {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: #374151;
+  text-align: left;
+}
+
+.blogContent h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #1e3a8a;
+  margin: clamp(20px, 5vw, 40px) 0 clamp(10px, 3vw, 20px) 0;
+  font-weight: 700;
+}
+
+.blogContent p {
+  margin-bottom: 20px;
+}
+
+.backBtn {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin: 40px auto 0;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.backBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+}

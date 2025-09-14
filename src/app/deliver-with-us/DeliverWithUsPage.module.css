@@ -1,0 +1,82 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative; /* to properly place the background image with ::before */
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/backgrounds/partner_bg.jpg") no-repeat center center;
+  background-size: cover;
+  filter: brightness(1.1);
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* lighter overlay */
+  z-index: 0;
+}
+
+.main * {
+  position: relative;
+  z-index: 1; /* keep hero content above overlay */
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 80px;
+  z-index: 2;
+}
+
+.heading {
+  font-size: clamp(4rem, 5vw, 4.5rem);
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  padding: 10px 0;
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: slideInLeft 1.5s ease-out forwards;
+  transition: transform 0.3s ease;
+}
+
+.heading span:hover {
+  color: #1e40af;
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 600px; /* or 500px for narrower form */
+  display: flex;
+  justify-content: center; /* Push form to the right */
+  align-items: center;
+  padding-right: 0; /* controls how far right */
+}

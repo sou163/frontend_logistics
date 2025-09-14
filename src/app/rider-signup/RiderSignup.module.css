@@ -1,0 +1,88 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative; /* to properly place the background image with ::before */
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/backgrounds/rider_bg.jpg") no-repeat center center;
+  background-size: cover;
+  filter: brightness(1.1) blur(2px);
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* lighter overlay */
+  z-index: 0;
+}
+
+.main * {
+  position: relative;
+  z-index: 1; /* keep hero content above overlay */
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+}
+
+.heading {
+  font-size: clamp(4rem, 5vw, 4.5rem);
+  color: #fff9f9;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  padding: 10px 0;
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: slideInLeft 1.5s ease-out forwards;
+  transition: transform 0.3s ease;
+}
+
+.heading span:hover {
+  color: #1e40af;
+}
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  /* margin-right: -300px; */
+  margin-right: clamp(-40px, -16vw, -300px);
+  justify-content: flex-end; /* Push form to the right on desktop */
+  padding-left: 120px; /* controls how far right */
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    justify-content: center;
+    padding: 0;
+  }
+}

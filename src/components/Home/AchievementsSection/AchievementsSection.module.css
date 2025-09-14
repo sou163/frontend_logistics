@@ -1,0 +1,77 @@
+.achievementsSection {
+  padding: clamp(60px, 7vw, 80px) clamp(20px, 6vw, 80px);
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 800;
+  color: #2e2d2d;
+  margin-top: 60px;
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.heading span {
+  color: #1e40af; /* accent color */
+}
+
+.subHeading {
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  color: black;
+  margin-bottom: clamp(40px, 8vw, 120px);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.card {
+  background: #fff;
+  padding: clamp(12px, 2vw, 20px);
+  border-radius: 12px;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.08);
+  flex: 1 1 160px;
+  max-width: clamp(140px, 20vw, 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.25);
+}
+
+.image {
+  width: clamp(100px, 15vw, 180px);
+  height: auto;
+  object-fit: contain;
+}
+
+.title {
+  margin-top: auto;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .grid {
+    gap: 20px;
+  }
+  .card {
+    max-width: 160px;
+    padding: 15px;
+  }
+  .image {
+    width: clamp(80px, 30vw, 140px);
+  }
+  .title {
+    font-size: 0.85rem;
+  }
+}

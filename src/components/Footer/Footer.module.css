@@ -1,0 +1,115 @@
+.footer {
+  background: #1e3a8a;
+  color: white;
+  padding: clamp(30px, 6vw, 60px) clamp(20px, 5vw, 60px) clamp(20px, 4vw, 30px);
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(20px, 5vw, 50px);
+  margin: 0 auto;
+}
+
+.footerCol h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: clamp(12px, 2vw, 20px);
+  color: #60a5fa;
+}
+
+.footerCol a {
+  display: block;
+  margin-bottom: clamp(6px, 1.5vw, 10px);
+  color: #bfdbfe;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footerCol a:hover {
+  color: white;
+}
+
+.socialIcons {
+  display: flex;
+  gap: clamp(8px, 2vw, 12px);
+  margin-top: clamp(8px, 2vw, 10px);
+}
+
+.socialIcons a img {
+  transition: transform 0.2s ease;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  width: clamp(20px, 2.5vw, 28px);
+  height: clamp(20px, 2.5vw, 28px);
+}
+
+.socialIcons a:hover img {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid #374151;
+  padding: clamp(15px, 3vw, 20px) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  color: #9ca3af;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+}
+
+.footerBottomLeft {
+  flex: 1;
+}
+
+.footerBottomRight {
+  display: flex;
+  gap: clamp(12px, 2vw, 20px);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footerBottom a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerBottom a:hover {
+  color: white;
+}
+
+/* Tablet: stack columns into 2 per row */
+@media (max-width: 1024px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerBottomLeft {
+    flex: unset;
+    margin-bottom: 8px; /* little spacing */
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 640px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

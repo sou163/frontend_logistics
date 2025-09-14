@@ -1,0 +1,20 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  padding: 120px 0 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #374151;
+  margin: 0 auto auto;
+  max-width: 800px;
+  line-height: 1.8;
+}

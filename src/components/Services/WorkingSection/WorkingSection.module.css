@@ -1,0 +1,75 @@
+.working {
+  padding: clamp(30px, 5vw, 60px) clamp(40px, 6vw, 80px);
+  text-align: center;
+  /* background: #f9fafb;  */
+}
+
+.working h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #111;
+  margin-bottom: clamp(20px, 4vw, 40px);
+}
+
+.working h2 span {
+  color: #1e40af;
+}
+
+.working p {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  color: #374151;
+  margin-bottom: clamp(60px, 8vw, 100px);
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(30px, 5vw, 60px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+}
+
+.icon {
+  width: clamp(60px, 8vw, 80px);
+  height: clamp(60px, 8vw, 80px);
+  margin-bottom: 20px;
+}
+
+.step h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.step p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: #242a35;
+  line-height: 1.6;
+}
+
+.btnContainer {
+  margin-top: clamp(40px, 5vw, 60px);
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #244af1 0%, #072791 100%);
+  color: #fff;
+  padding: clamp(12px, 2vw, 18px) clamp(24px, 4vw, 40px);
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #2a88e6 0%, #0c2ea0 100%);
+}

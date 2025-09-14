@@ -1,0 +1,68 @@
+/* ===== JOB CONTENT ===== */
+.jobContent {
+  padding: 0 clamp(30px, 7vw, 80px) clamp(25px, 6vw, 50px);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(30px, 6vw, 60px);
+}
+
+.jobDescription {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.1);
+}
+
+.jobDescription h3 {
+  color: #1e3a8a;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.jobDescription h4 {
+  color: #1e40af;
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  margin: clamp(15px, 3vw, 25px) 0 15px 0;
+  font-weight: 600;
+}
+
+.jobDescription p,
+.jobDescription li {
+  color: #374151;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.jobDescription ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.jobDescription li {
+  margin-bottom: 8px;
+}
+
+.competenciesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(15px, 2vw, 20px);
+  align-items: stretch;
+  margin: 20px 0;
+}
+
+.competencyItem {
+  background: white;
+  padding: clamp(10px, 2vw, 15px);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #1e40af;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.1);
+  border-radius: 15px;
+}

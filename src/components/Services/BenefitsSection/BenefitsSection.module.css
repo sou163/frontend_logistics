@@ -1,0 +1,68 @@
+.benefits {
+  padding: clamp(60px, 8vw, 100px) clamp(40px, 6vw, 80px);
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #2e2d2d;
+  margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.heading span {
+  color: #1e40af; /* blue highlight */
+}
+
+.subheading {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  color: #374151;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(25px, 4vw, 50px);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  justify-content: center;
+  grid-auto-flow: row dense;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24px;
+  padding: clamp(30px, 3.5vw, 40px);
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.2);
+}
+
+.icon {
+  width: clamp(60px, 8vw, 80px);
+  height: clamp(60px, 8vw, 80px);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.6;
+}

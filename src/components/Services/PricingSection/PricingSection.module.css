@@ -1,0 +1,191 @@
+.pricing {
+  padding: clamp(40px, 7vw, 80px) clamp(20px, 6vw, 60px);
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+  font-weight: 700;
+  color: #2e2d2d;
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.pricing h2 span {
+  color: #1e40af;
+}
+
+.pricing p {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: #374151;
+  font-weight: 400;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+/* Plan Row */
+.planRow {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(280px, 1fr);
+  gap: clamp(30px, 4vw, 60px);
+  align-items: center;
+  padding: 0 clamp(40px, 6vw, 100px);
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.reverse {
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.2fr);
+  direction: rtl;
+}
+
+.reverse .planText {
+  direction: ltr; /* keep text normal */
+}
+
+.planText {
+  text-align: left;
+  padding: clamp(20px, 4vw, 40px);
+  max-width: 540px;
+}
+
+.planText h3 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #1e40af;
+}
+
+.tag {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  color: #2563eb;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 12px;
+  display: inline-block;
+}
+
+.price {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #111;
+  margin: 20px 0 30px;
+}
+
+.planText ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.planText li {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  color: #333;
+}
+
+.planText li svg {
+  width: clamp(20px, 4vw, 40px);
+  height: clamp(20px, 4vw, 40px);
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.planImage {
+  position: relative;
+}
+
+.planImage img {
+  max-width: 100%; /* prevent cut off */
+  width: 100%; /* scale within parent */
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  margin: 0 auto; /* center on smaller screens */
+  display: block;
+}
+
+.planTitle {
+  position: relative; /* make h3 the positioning context */
+  display: inline-block; /* so ribbon is only relative to this text */
+}
+
+/* Ribbon */
+.ribbon {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  background: #facc15; /* yellow */
+  color: #111;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #244af1 0%, #072791 100%);
+  color: #fff;
+  border: none;
+  margin-top: clamp(20px, 3vw, 30px);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #2a88e6 0%, #0c2ea0 100%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .planRow {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;  */
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .planText {
+    text-align: left;
+    max-width: 100%;
+    padding: 20px 0;
+  }
+
+  .planImage {
+    order: 2; /* always below text */
+    margin: 10px 0 30px;
+    width: 100%;
+  }
+
+  .planImage img {
+    width: 100%;
+    height: auto; /* shrink naturally */
+  }
+
+  .planText ul {
+    text-align: left;
+    display: block;
+  }
+
+  .ribbon {
+    position: static; /* place it inline above title */
+    /* display: block; */
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  .planTitle {
+    display: block;
+    text-align: left;
+  }
+}

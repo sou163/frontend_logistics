@@ -1,0 +1,122 @@
+/* Mobile menu styles */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* initialy hidden off-screen */
+  width: 90%;
+  max-width: 400px;
+  height: 100vh;
+  background: #1e3a8a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* links up - buttons down*/
+  padding: 24px;
+  box-shadow: -4px 0 15px rgba(30, 58, 138, 0.5);
+  transition: right 0.3s ease-in-out;
+  z-index: 1200;
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 2.8rem;
+  color: white;
+  align-self: flex-end;
+  cursor: pointer;
+  /* margin-bottom: 2rem; */
+}
+
+/* Menu links */
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.menuLinks a {
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.mobileDropdown {
+  margin-left: 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileDropdown a {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.menuLinks a:hover,
+.mobileDropdown a:hover {
+  color: #f5b342 !important;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Primary CTA: Become a Rider */
+.ctaBtn {
+  display: block;
+  background-color: #ffcc00; /* Bright yellow for strong contrast */
+  color: #0a0a23; /* Dark text for readability */
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.ctaBtn:hover {
+  background-color: #ffd633; /* Slightly lighter yellow */
+  transform: translateY(-2px);
+}
+
+/* Secondary CTA: Deliver With Us */
+.secondaryBtn {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* Light overlay */
+  transform: translateY(-2px);
+}

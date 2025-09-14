@@ -1,0 +1,215 @@
+/* ===== OUR PRESENCE SECTION ===== */
+.presence {
+  padding: clamp(60px, 7vw, 80px) clamp(20px, 6vw, 80px);
+  text-align: center;
+}
+
+.presence h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.presence p {
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  color: #374151;
+  margin-bottom: clamp(40px, 8vw, 120px);
+  font-weight: 400;
+}
+
+.presenceContent {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: clamp(40px, 5vw, 60px);
+  align-items: center;
+}
+
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.cityCard {
+  background: linear-gradient(135deg, #244af1 0%, #072791 100%);
+  padding: 15px 30px;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.3s ease;
+  border: 3px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cityCard:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  border-color: #3b82f6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cityCard.active {
+  background: linear-gradient(135deg, #121dbd 0%, #0fa723 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cityVisual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(30, 58, 138, 0.3);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: slideIn 0.6s ease forwards;
+  border-radius: 30px;
+}
+
+/* Shine animation */
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    transparent 60%
+  );
+  transform: rotate(25deg);
+  animation: imageShine 4s infinite;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.btnContainer {
+  margin-top: clamp(60px, 8vw, 80px);
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #244af1 0%, #072791 100%);
+  color: #fff;
+  padding: clamp(10px, 2vw, 18px) clamp(20px, 4vw, 40px);
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #2a88e6 0%, #0c2ea0 100%);
+}
+
+@keyframes imageShine {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
+
+.cityImage {
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.placeholder {
+  font-size: 1.2rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Tablet & Mobile stacked layout */
+@media (max-width: 1024px) {
+  .presenceContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cityGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 20px;
+    margin: 0 auto 30px;
+    max-width: 100%;
+  }
+
+  .cityVisual {
+    height: 350px;
+  }
+}
+
+/* Our Presence section mobile responsiveness */
+@media (max-width: 768px) {
+  .presence h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .presenceContent {
+    grid-template-columns: 1 fr;
+    gap: 40px;
+  }
+
+  /* .cityGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  } */
+
+  .cityCard {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    min-height: 60px;
+  }
+
+  .cityVisual {
+    height: 250px;
+  }
+}

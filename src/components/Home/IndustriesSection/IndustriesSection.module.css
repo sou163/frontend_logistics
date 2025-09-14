@@ -1,0 +1,107 @@
+.industries {
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px);
+  text-align: center;
+}
+
+.industries h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 800;
+  color: #2e2d2d;
+  margin-top: clamp(20px, 4vw, 40px);
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.industries h2 span {
+  color: #1e40af; /* accent color */
+}
+
+.industries p {
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
+  color: #374151;
+  margin-bottom: clamp(40px, 8vw, 120px);
+}
+
+.industryCard {
+  position: relative;
+  border-radius: clamp(20px, 4vw, 40px);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+}
+
+.industryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop uniformly */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.industryCard:hover .industryImage {
+  transform: scale(1.05);
+}
+
+.industryOverlay {
+  display: flex;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  position: absolute;
+  bottom: clamp(10px, 4vw, 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(70%, 80%, 85%);
+  max-width: 70%;
+  justify-content: center;
+  pointer-events: none;
+  border-radius: clamp(10px, 3vw, 20px);
+}
+
+.overlayContent {
+  background: rgba(0, 0, 0, 0.3); /* transparent dark background */
+  backdrop-filter: blur(6px); /* blurred glass effect */
+  border-radius: clamp(10px, 3vw, 20px);
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 15px);
+  display: inline-block;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.overlayContent h1 {
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+  margin: 0 0 4px;
+  font-weight: 650;
+}
+
+.overlayContent p {
+  font-size: clamp(0.7rem, 1.6vw, 1rem);
+  color: #fff; /* brighter for readability */
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.btnContainer {
+  margin-top: clamp(60px, 10vw, 120px);
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #244af1 0%, #072791 100%);
+  color: #fff;
+  padding: clamp(10px, 2vw, 18px) clamp(20px, 4vw, 40px);
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #2a88e6 0%, #0c2ea0 100%);
+}

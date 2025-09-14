@@ -1,0 +1,108 @@
+.services {
+  padding: clamp(45px, 6vw, 80px) clamp(15px, 6vw, 80px);
+  text-align: center;
+}
+
+.services h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #2e2d2d;
+  margin-bottom: clamp(20px, 5vw, 40px);
+}
+
+.services h2 span {
+  color: #1e40af;
+}
+
+.services p {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+  color: #374151;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+/* ===== SERVICES GRID ===== */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(40px, 6vw, 70px);
+  grid-auto-flow: row dense;
+  align-items: stretch;
+}
+
+.serviceCard {
+  background: #fff;
+  border: 2px solid #2656f3;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: clamp(15px, 3vw, 20px);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  border-color: #1e40af;
+  box-shadow: 0 12px 28px rgba(44, 83, 212, 0.4);
+}
+
+.serviceImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 3vw, 20px);
+}
+
+.serviceImage img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.serviceText {
+  flex: 1;
+  margin-top: auto;
+  padding: clamp(15px, 3vw, 20px);
+  text-align: center;
+}
+
+.serviceText h3 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: clamp(10px, 2vw, 15px);
+}
+
+.serviceText p {
+  margin-bottom: clamp(20px, 4vw, 30px);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: #333;
+  font-weight: 500;
+}
+
+.btnContainer {
+  margin-top: clamp(60px, 8vw, 100px);
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #244af1 0%, #072791 100%);
+  color: #fff;
+  padding: clamp(12px, 2vw, 18px) clamp(24px, 4vw, 40px);
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #2a88e6 0%, #0c2ea0 100%);
+}
